@@ -4,6 +4,8 @@
 #include "fixedQueue.h"
 #include "dynamicQueue.h"
 #include "linkedList.h"
+#include "undirectedGraph.h"
+#include "directedGraph.h"
 using namespace std;
 
 int main(int argc, char const *argv[]) {
@@ -92,6 +94,29 @@ int main(int argc, char const *argv[]) {
   ll->printList();
   cout << "***************************\n";
   /*----------------------------------------*/
+  
+    /*Undirected Graph test*/
+  cout << "---------Undirected Graph----------\n";
+  UndirectedGraph *und_gr = new UndirectedGraph(5);
+  und_gr->createEdges(0,1);
+  und_gr->createEdges(2,1);
+  und_gr->createEdges(3,2);
+  und_gr->createEdges(4,2);
+  und_gr->createEdges(4,1);
+  und_gr->printGraph();
+  cout << "***************************\n";
+  /*----------------------------------------*/
+
+  /*Directed Graph test*/
+  cout << "---------Directed Graph----------\n";
+  DirectedGraph *d_gr = new DirectedGraph(5);
+  d_gr->createEdges(0,1);
+  d_gr->createEdges(2,1);
+  d_gr->createEdges(3,2);
+  d_gr->createEdges(4,2);
+  d_gr->createEdges(4,1);
+  d_gr->printGraph();
+  cout << "***************************\n";
 
   return 0;
 }
