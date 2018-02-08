@@ -116,7 +116,6 @@ int main(int argc, char const *argv[]) {
   d_gr->createEdges(4,2);
   d_gr->createEdges(4,1);
   d_gr->printGraph();
-  cout << "***************************\n";
 
   return 0;
 }
